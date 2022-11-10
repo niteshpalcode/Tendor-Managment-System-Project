@@ -1,0 +1,30 @@
+package com.TMS.UTIL;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBUtil {
+
+	public static Connection provideConnection() {
+		Connection conection=null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String url="jdbc:mysql://localhost:3306/tenderdb";
+		
+		try {
+			conection = DriverManager.getConnection(url, "root", "nitesh");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return conection;
+	}
+}
