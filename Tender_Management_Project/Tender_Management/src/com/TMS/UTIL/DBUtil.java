@@ -3,6 +3,8 @@ package com.TMS.UTIL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DBUtil {
 
@@ -26,5 +28,16 @@ public class DBUtil {
 		
 		
 		return conection;
+	}
+	
+
+	public static String generateBidderId(){
+		String bidderId = null;
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("MMddmmss");
+		bidderId =sdf.format(new Date());
+//		bidderId = "B"+bidderId;
+		
+		return bidderId;
 	}
 }

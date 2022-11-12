@@ -7,7 +7,7 @@ public class Tendor {
 	private String t_cost;
 	private String t_desc;
 	private String t_deadline;
-	private String t_lock;
+	private String t_locaction;
 	public Tendor() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -49,10 +49,10 @@ public class Tendor {
 		this.t_deadline = t_deadline;
 	}
 	public String getT_lock() {
-		return t_lock;
+		return t_locaction;
 	}
 	public void setT_lock(String t_lock) {
-		this.t_lock = t_lock;
+		this.t_locaction = t_lock;
 	}
 	public Tendor(int t_id, String t_name, String t_type, String t_cost, String t_desc, String t_deadline,
 			String t_lock) {
@@ -63,12 +63,12 @@ public class Tendor {
 		this.t_cost = t_cost;
 		this.t_desc = t_desc;
 		this.t_deadline = t_deadline;
-		this.t_lock = t_lock;
+		this.t_locaction = t_lock;
 	}
 	@Override
 	public String toString() {
 		return "Tendor [t_id=" + t_id + ", t_name=" + t_name + ", t_type=" + t_type + ", t_cost=" + t_cost + ", t_desc="
-				+ t_desc + ", t_deadline=" + t_deadline + ", t_lock=" + t_lock + "]";
+				+ t_desc + ", t_deadline=" + t_deadline + ", t_lock=" + t_locaction + "]";
 	}
 	
 	

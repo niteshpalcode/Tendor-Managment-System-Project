@@ -26,13 +26,16 @@ public class AddVendor {
 		System.out.println("Enter Vendor's Email : ");
 		String email=sc.next();
 		
+		System.out.println("Enter Vendor's password : ");
+		String password=sc.next();
+		
 		System.out.println("Enter Comapany Name: ");
 		String c_name=sc.next();
 		
 		System.out.println("Enter Address: ");
 		String address=sc.next();
 		
-		Vendor v=new Vendor(id,name, mobile, email, c_name, address);
+		Vendor v=new Vendor(id,name, mobile, email,password, c_name, address);
 		VendorDao v_dao=new VendorDaoImpl();
 		
 		String result = v_dao.insertVendorDetail(v);

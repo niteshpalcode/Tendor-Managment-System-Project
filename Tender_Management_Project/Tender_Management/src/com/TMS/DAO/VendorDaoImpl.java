@@ -21,13 +21,14 @@ public class VendorDaoImpl implements VendorDao {
 		
 		try (Connection conection=DBUtil.provideConnection()){
 			
-			PreparedStatement ps = conection.prepareStatement("insert into vendor values(?,?,?,?,?,?)");
+			PreparedStatement ps = conection.prepareStatement("insert into vendor values(?,?,?,?,?,?,?)");
 			ps.setInt(1, v.getV_id());
 			ps.setString(2, v.getV_name());
 			ps.setString(3, v.getV_mobile());
 			ps.setString(4, v.getV_email());
-			ps.setString(5, v.getV_company());
-			ps.setString(6, v.getV_address());
+			ps.setString(5, v.getV_password());
+			ps.setString(6, v.getV_company());
+			ps.setString(7, v.getV_address());
 			
 			int x=ps.executeUpdate();
 			
@@ -45,6 +46,10 @@ public class VendorDaoImpl implements VendorDao {
 		return result;
 	}
 
+	
+	
+	
+	
 	@Override
 	public List<Vendor> showAllVendors() throws VendorException {
 		// TODO Auto-generated method stub
@@ -60,8 +65,9 @@ public class VendorDaoImpl implements VendorDao {
 				String v_email=rs.getString("v_email");
 				String v_cname=rs.getString("v_company");
 				String v_address=rs.getString("v_address");
+				String v_password=rs.getString("v_pass");
 				
-				Vendor vobj=new Vendor(v_id, v_name, v_mobile, v_email, v_cname, v_address);
+				Vendor vobj=new Vendor(v_id, v_name, v_mobile, v_email,v_password, v_cname, v_address);
 				v.add(vobj);
 				
 			}

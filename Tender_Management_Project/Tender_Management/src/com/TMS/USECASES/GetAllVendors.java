@@ -21,6 +21,7 @@ public class GetAllVendors {
 				System.out.println("vendor id: "+ s.getV_id());
 				System.out.println("vendor name: "+ s.getV_name());
 				System.out.println("vendor email: "+ s.getV_email());
+				
 				System.out.println("vendor Mobile: "+s.getV_mobile());
 				System.out.println("vendor company: "+s.getV_company());
 				System.out.println("vendor address: "+s.getV_address());
