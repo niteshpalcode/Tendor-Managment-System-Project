@@ -1,3 +1,4 @@
+
 # White-Project
 Individual Project 
 
@@ -29,3 +30,7 @@ The Role of a Vendor is:
 2. Place a Bid against a Tender.
 3. View status of a Bid(Whether Selected or Not)
 4. View his own Bid History.
+
+
+
+https://user-images.githubusercontent.com/101392580/204501287-a652f6cf-e7a0-4529-8df0-9bfc69ced51f.png
